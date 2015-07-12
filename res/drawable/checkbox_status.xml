@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 定义选中后的 -->
+    <item android:drawable="@drawable/checkbox_pressed" android:state_checked="true"></item>
+    <!-- 定义没选中的 -->
+    <item android:drawable="@drawable/checkbox_normal" android:state_checked="false"></item>
+	<item android:drawable="@drawable/checkbox_normal"></item>
+</selector>

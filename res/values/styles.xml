@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Default" parent="@android:style/Theme.Light.NoTitleBar">
+
+        <!-- 亮背景主题的没有标题栏的样式，与Theme.Black.NoTitleBar相反 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 是否允许背景灰暗 -->
+        <item name="android:windowTitleSize">50.0dip</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>
+    </style>
+
+    <style name="style_15_areaColor">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/area</item>
+    </style>
+
+    <!-- end -->
+
+    <style name="MyDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/ic_launcher</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

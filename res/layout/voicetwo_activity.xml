@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_gravity="center"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+    
+    <include 
+        layout="@layout/title_land"
+        android:id="@+id/voicetwo_layout"/>
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/layout1"
+            android:layout_below="@id/voicetwo_layout"
+            android:layout_marginTop="20dp">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="@string/text1"
+            android:textSize="15dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:text="@string/text10"
+            android:textColor="#FF6100"
+            android:layout_alignTop="@id/text1"
+            android:layout_toRightOf="@id/text1"
+            android:textSize="15dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:text="@string/text3"
+            android:textSize="15dp"
+            android:layout_alignTop="@id/text1"
+            android:layout_toRightOf="@id/text2"/>
+     
+        </RelativeLayout>
+        <!-- 发送短信的号码 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout2"
+            android:text="@string/phonenumber"
+            android:layout_below="@id/layout1"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"/>
+        
+        <!-- 输入验证码 -->
+        <EditText 
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:id="@+id/text4"
+            android:layout_below="@id/layout2"
+            android:layout_alignLeft="@id/layout2"
+            android:hint="@string/text4"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:background="@drawable/iforminput_bg"
+            android:layout_marginTop="20dp"
+            />
+        
+        <!-- 接收短信倒计时 -->
+        <TextView 
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:id="@+id/retry"
+            android:background="@drawable/green2"
+            android:layout_toRightOf="@id/text4"
+            android:layout_alignTop="@id/text4"
+            android:text="@string/text12"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text11"
+            android:text="@string/text11"
+            android:textSize="10dp"
+            android:layout_alignLeft="@id/layout1"
+            android:layout_below="@id/text4"
+            android:layout_marginTop="40dp"/>
+        
+        
+        
+        
+</RelativeLayout>
+	

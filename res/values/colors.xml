@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="fenge">#d9d9d9</color>
+    <color name="aa">#999999</color>
+    <color name="lvse">#7fd53e</color>
+    <color name="background1">#ebebeb</color>
+    <color name="daojishi">#71d525</color>
+    <color name="voice_vertify">#69a7e2</color>
+    <color name="chengse">#f68b22</color>
+	<color name="mainBg">#fbfbfb</color>
+	<color name="tip">#999999</color>
+	<color name="area">#666666</color>
+	<color name="gray">#c6c2c2</color>
+	<color name="verifying_gray">#f6f6f6</color>
+	<color name="pointGray">#d1d1d1</color>
+</resources>

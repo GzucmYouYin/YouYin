@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_gravity="center"
+    android:background="#ebebeb" >
+    
+    <include 
+        layout="@layout/title_land"
+        android:id="@+id/alipay_layout"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alipay_register"
+        android:id="@+id/alipay_register"
+        android:layout_below="@id/alipay_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+    
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/alipay_id"
+        android:hint="@string/alipay_id"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/iforminput_bg"
+        android:layout_below="@id/alipay_register"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/alipay_password"
+        android:hint="@string/alipay_password"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/iforminput_bg"
+        android:layout_below="@id/alipay_id"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/find_password"
+        android:layout_below="@id/alipay_password"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@id/alipay_password">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/find_passwordtext"
+            android:text="@string/find_password"
+            android:textColor="@color/chengse"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="@color/chengse"
+            android:layout_alignRight="@id/find_passwordtext"
+            android:layout_alignLeft="@id/find_passwordtext"
+            android:layout_below="@id/find_passwordtext"/>
+        
+    </RelativeLayout>
+    
+    
+    
+
+</RelativeLayout>

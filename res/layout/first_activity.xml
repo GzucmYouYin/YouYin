@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/youyin_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/lvse" >
+
+        <ImageView
+            android:id="@+id/touxiangImg"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/touxiang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/youyin"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/shareAppImg"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/share" />
+    </RelativeLayout>
+    <!-- 搜索 -->
+
+    <ImageView
+        android:id="@+id/seek"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/youyin_title"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/seek" />
+
+    <View
+        android:id="@+id/fenge"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/youyin_title"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/seek"
+        android:background="@color/background1" />
+
+    <EditText
+        android:id="@+id/first_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/youyin_title"
+        android:layout_toLeftOf="@id/fenge"
+        android:background="@drawable/iforminput_bg"
+        android:hint="@string/first_hint"
+        android:paddingLeft="50dp"
+        android:textSize="15dp" />
+
+    <!-- 茶 -->
+    <FrameLayout
+        android:id="@+id/tea_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/first_hint"
+        android:background="@drawable/meitu" >
+
+        <com.gzucm.youyin.fastscroll.ViewFlow
+            android:id="@+id/viewflow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.gzucm.youyin.fastscroll.ViewFlow>
+
+        <LinearLayout
+            android:id="@+id/lunbo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dip" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <com.gzucm.youyin.fastscroll.CircleFlowIndicator
+                android:id="@+id/viewflowindic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:padding="2dip"
+                android:radius="4dip" 
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 上架时间 销量 库存 -->
+
+    <RelativeLayout
+        android:id="@+id/case_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/tea_layout"
+        android:background="@drawable/iforminput_bg" >
+
+        <!-- 上架时间 -->
+
+        <RelativeLayout
+            android:id="@+id/time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp" >
+
+            <TextView
+                android:id="@+id/up_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/up_time"
+                android:textColor="@color/lvse"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/first_time_upc"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@id/up_time"
+                android:src="@drawable/upc" />
+
+            <ImageView
+                android:id="@+id/first_time_upg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/first_time_upc"
+                android:layout_toRightOf="@id/up_time"
+                android:src="@drawable/upg" />
+        </RelativeLayout>
+        <!-- 销量 -->
+
+        <RelativeLayout
+            android:id="@+id/volume_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/sale_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/sale_volume"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/first_volume_upc"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@id/sale_volume"
+                android:src="@drawable/upc" />
+
+            <ImageView
+                android:id="@+id/first_volume_upg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/first_volume_upc"
+                android:layout_toRightOf="@id/sale_volume"
+                android:src="@drawable/upg" />
+        </RelativeLayout>
+
+        <!-- 库存 -->
+
+        <RelativeLayout
+            android:id="@+id/inventory_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="85dp" >
+
+            <TextView
+                android:id="@+id/inventory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/inventory"
+                android:textSize="10dp" />
+
+            <ImageView
+                android:id="@+id/first_inventory_upc"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toRightOf="@id/inventory"
+                android:src="@drawable/upc" />
+
+            <ImageView
+                android:id="@+id/first_inventory_upg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@id/first_inventory_upc"
+                android:layout_toRightOf="@id/inventory"
+                android:src="@drawable/upg" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/first_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/case_layout" >
+
+        <LinearLayout
+            android:id="@+id/first_tea"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/lvItemLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/first_tea_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/p" />
+
+                <TextView
+                    android:id="@+id/first_wuhuacha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/first_tea_img"
+                    android:text="@string/wuhuatea"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/first_tea_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/first_wuhuacha"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/first_wuhuacha"
+                    android:text="@string/first_price"
+                    android:textColor="@color/lvse"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_tea_funtion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/first_wuhuacha"
+                    android:layout_below="@id/first_wuhuacha"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/funtion"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_total_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/first_tea_funtion"
+                    android:layout_below="@id/first_tea_funtion"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/total_volume"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_volume_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_tea_funtion"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/first_total_volume"
+                    android:text="@string/amount"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_tea_inventory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_tea_funtion"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/first_volume_amount"
+                    android:text="@string/inventory"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_inventory_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_tea_funtion"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/first_tea_inventory"
+                    android:text="@string/amount"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/first_tea_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_tea_funtion"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/first_tea_price"
+                    android:text="@string/four" />
+
+                <ImageView
+                    android:id="@+id/first_tea_buy"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@id/first_wuhuacha"
+                    android:layout_below="@id/first_total_volume"
+                    android:src="@drawable/buy" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/first_volume_amount"
+                    android:layout_below="@id/first_total_volume"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/fenge" />
+
+                <ImageView
+                    android:id="@+id/first_tea_cart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@id/first_tea_inventory"
+                    android:layout_below="@id/first_total_volume"
+                    android:src="@drawable/first_cart" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/first_inventory_amount"
+                    android:layout_below="@id/first_total_volume"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/fenge" />
+
+                <ImageView
+                    android:id="@+id/first_tea_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/first_tea_time"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/share" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1.33dp"
+                android:layout_below="@id/first_tea_buy"
+                android:layout_marginTop="3dp"
+                android:background="@color/fenge" />
+
+            <RelativeLayout
+                android:id="@+id/second_tea_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/second_tea_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/p" />
+
+                <TextView
+                    android:id="@+id/second_wuhuacha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/second_tea_img"
+                    android:text="@string/wuhuatea"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/second_tea_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/second_wuhuacha"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/second_wuhuacha"
+                    android:text="@string/first_price"
+                    android:textColor="@color/lvse"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_tea_funtion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/second_wuhuacha"
+                    android:layout_below="@id/second_wuhuacha"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/funtion"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_total_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/second_tea_funtion"
+                    android:layout_below="@id/second_tea_funtion"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/total_volume"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_volume_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_tea_funtion"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/second_total_volume"
+                    android:text="@string/amount"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_tea_inventory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_tea_funtion"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/second_volume_amount"
+                    android:text="@string/inventory"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_inventory_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_tea_funtion"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/second_tea_inventory"
+                    android:text="@string/amount"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/second_tea_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_tea_funtion"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/second_tea_price"
+                    android:text="@string/four" />
+
+                <ImageView
+                    android:id="@+id/second_tea_buy"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@id/second_wuhuacha"
+                    android:layout_below="@id/second_total_volume"
+                    android:src="@drawable/buy" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/second_volume_amount"
+                    android:layout_below="@id/second_total_volume"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/fenge" />
+
+                <ImageView
+                    android:id="@+id/second_tea_cart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@id/second_tea_inventory"
+                    android:layout_below="@id/second_total_volume"
+                    android:src="@drawable/first_cart" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@id/second_inventory_amount"
+                    android:layout_below="@id/second_total_volume"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/fenge" />
+
+                <ImageView
+                    android:id="@+id/second_tea_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@id/second_tea_time"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/share" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1.33dp"
+                android:layout_below="@id/second_tea_buy"
+                android:layout_marginTop="3dp"
+                android:background="@color/fenge" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

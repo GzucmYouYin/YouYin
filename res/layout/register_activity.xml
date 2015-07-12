@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBg" >
+
+    <!-- 输入提示部分定义 -->
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:paddingLeft="10dip"
+        android:text="@string/hint"
+        android:textColor="@color/tip"
+        android:textSize="12sp" />
+    <!-- 四个长方形框的定义，采用RelativeLayout布局 -->
+    <!-- 国家和地区 -->
+
+    <RelativeLayout
+        android:id="@+id/rala_chose_country"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_below="@id/hint"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/area_select" >
+
+        <TextView
+            android:id="@+id/area_hint"
+            style="@style/style_15_areaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:text="@string/area_hint" />
+
+        <Button
+            android:id="@+id/tv_chosed_country"
+            style="@style/style_15_areaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:drawableRight="@drawable/arrow_right"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="@string/china" />
+    </RelativeLayout>
+    <!-- 输入电话号码的 -->
+
+    <RelativeLayout
+        android:id="@+id/phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_below="@id/rala_chose_country"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/area_select" >
+
+        <TextView
+            android:id="@+id/edt_chosed_country_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dip"
+            android:text="@string/prephonenumber"
+            android:textColor="@color/area"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vertical_line"
+            android:layout_width="2dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/edt_chosed_country_num"
+            android:background="#ebebeb" />
+
+        <EditText
+            android:id="@+id/regist_phonenumber_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/vertical_line"
+            android:background="#ffffffff"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingRight="5dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phonenumber"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="15dip" >
+
+        <CheckBox
+            android:id="@+id/agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select"
+            android:checked="true"
+            android:text="@string/agree" />
+
+        <TextView
+            android:id="@+id/register_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_agree"
+            android:textColor="#F68B22"
+            android:textSize="7pt" />
+    </LinearLayout>
+
+</RelativeLayout>

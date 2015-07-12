@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gzucm.youyin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- ShareSdk permission begin -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- ShareSdk permission end -->
+
+
+    <!-- alipay sdk permission begin -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- alipay sdk permission end -->
+
+    <application
+        android:name="com.gzucm.youyin.application.ECApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Default" >
+
+        <!-- 首页 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 搜索 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.SampleSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 欢迎 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 引导 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 登录注册 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.LoginRegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 登录 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 找回密码 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.FindPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 找回密码的填写验证码 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.FindPasswordVerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 重置密码 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.ResetpasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 国家选择 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.CountryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 注册使用协议 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.UserAgreementActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 填写验证码 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.RegisterVerifyActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 设置密码 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.SetpasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 个人信息 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.PersonInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 宝贝详情 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.ProductDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 添加地址 -->
+        <activity
+            android:name="com.gzucm.youyin.activity.AddAddressActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- bmob pay sdk activity begin ,please put below code into application tag -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.bmob.pay.tool.PayActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- bmob pay sdk activity end -->
+
+
+        <!-- ShareSdk activity begin 2.6.0以后 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 易信分享回调 -->
+        <activity
+            android:name=".yxapi.YXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ShareSdk activity end -->
+
+
+        <!-- 服务 -->
+        <service android:name="com.gzucm.youyin.service.ECServiceManager" >
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+          
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/gray"
+        android:id="@+id/search_all">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_quxiao"
+            android:text="@string/quxiao"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/lvse"/>
+        
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/search_edit"
+            android:layout_toLeftOf="@id/search_quxiao"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+            <ImageView 
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/seek"
+                android:id="@+id/search_seek"/>
+            
+            <EditText 
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:id="@+id/sousuo_edit"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/iforminput_bg"
+                android:hint="@string/search_hint"
+                android:layout_centerVertical="true"
+                android:textSize="20dp"
+                android:layout_toRightOf="@id/search_seek"/>
+            
+            
+            
+        </RelativeLayout>
+        
+        
+        
+    </RelativeLayout>
+     <ListView
+    android:id="@+id/list"   
+    android:layout_width="fill_parent"     
+    android:layout_height="fill_parent"
+    android:layout_below="@id/search_all"/>     
+    
+
+
+</RelativeLayout>

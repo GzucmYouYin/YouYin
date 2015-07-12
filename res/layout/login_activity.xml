@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/mainBg"
+    android:orientation="vertical" >
+
+    <!-- 输入提示部分定义 -->
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:paddingLeft="10dip"
+        android:text="@string/hint"
+        android:textColor="@color/tip"
+        android:textSize="12sp" />
+    <!-- 四个长方形框的定义，采用RelativeLayout布局 -->
+    <!-- 国家和地区 -->
+
+    <RelativeLayout
+        android:id="@+id/area_selectLog"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="20dip"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/area_hintLog"
+            style="@style/style_15_areaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:text="@string/area_hint" />
+
+        <Button
+            android:id="@+id/country_select"
+            style="@style/style_15_areaColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:drawableRight="@drawable/arrow_right"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="@string/china" />
+    </RelativeLayout>
+    <!-- 输入电话号码的 -->
+
+    <RelativeLayout
+        android:id="@+id/phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="30dip"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/prephonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dip"
+            android:text="@string/prephonenumber"
+            android:textColor="@color/area"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/vertical_line"
+            android:layout_width="2dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@id/prephonenumber"
+            android:background="#d9d9d9" />
+
+        <EditText
+            android:id="@+id/prephonenumber_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/vertical_line"
+            android:background="@color/white"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingRight="20dip" >
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+    <!-- 输入密码的 -->
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="30dip"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:textSize="6pt" >
+    </EditText>
+
+    <!-- 找回密码 -->
+
+    <RelativeLayout
+        android:id="@+id/findpassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dip"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/findPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/find_password"
+            android:textColor="#F68B22" />
+    </RelativeLayout>
+
+</LinearLayout>

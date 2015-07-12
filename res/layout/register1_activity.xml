@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_gravity="center"
+    android:background="@color/background1">
+    
+    <include 
+        layout="@layout/title_land"
+        android:id="@+id/register1_layout"/>
+    
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register1_layout"
+        android:layout_marginTop="20dip"
+        android:paddingLeft="10dip"
+        android:text="@string/hint"
+        android:textColor="#D3D3D3"
+        android:textSize="12sp" />
+    
+    <RelativeLayout
+        android:id="@+id/area_select"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/hint"
+        android:background="@drawable/area_select" >
+
+        <TextView
+            android:id="@+id/area_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:text="@string/area_hint"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/country_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#ffffffff"
+            android:drawableRight="@drawable/arrow_right"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="@string/china"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@id/area_select"
+        android:background="@drawable/area_select" >
+
+        <TextView
+            android:id="@+id/prephonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dip"
+            android:text="@string/prephonenumber1"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vertical_line"
+            android:layout_width="2dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/prephonenumber"
+            android:background="#ebebeb" />
+
+        <EditText
+            android:id="@+id/prephonenumber_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/vertical_line"
+            android:background="#ffffffff"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingRight="20dip" />
+    </RelativeLayout>
+
+    
+        
+        <ImageView 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/gou"
+            android:src="@drawable/gou"
+            android:layout_alignLeft="@id/hint"
+            android:layout_below="@id/phonenumber"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/gou1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/gou"
+            android:layout_alignTop="@id/gou"
+            android:text="@string/gou1"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/gou2"
+            android:layout_toRightOf="@id/gou1"
+            android:layout_alignTop="@id/gou1"
+            android:text="@string/gou2"
+            android:textColor="@color/chengse"/>
+        
+    
+    
+    
+</RelativeLayout>

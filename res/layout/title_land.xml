@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="#7FD53E" >
+
+    <!-- 绿色部分的定义，包含一个ImageButton,一个Textview，一个Button -->
+
+    <ImageButton
+        android:id="@+id/head_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:background="#7FD53E"
+        android:contentDescription="@string/back"
+        android:src="@drawable/arrowleft" />
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="10pt" />
+
+    <Button
+        android:id="@+id/head_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="#7FD53E"
+        android:textColor="@drawable/next_edit_status"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

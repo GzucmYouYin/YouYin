@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ebebeb" >
+    
+    <include 
+        layout="@layout/title_land"
+        android:id="@+id/submit_layout"/>
+   
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/submit_layout">
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!-- 名字  电话 地点 --> 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/iforminput_bg"   
+        android:id="@+id/re1">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/location"
+            android:id="@+id/image1"
+            android:layout_marginLeft="30dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name1"
+            android:layout_toRightOf="@id/image1"
+            android:textSize="20dp"
+            android:text="@string/name1"
+            
+            />
+       
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phonenumber1"
+            android:id="@+id/phonenumber1"
+            android:textColor="#999999"
+            android:textSize="20dp"
+            android:layout_alignLeft="@id/name1"
+            android:layout_below="@id/name1"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textColor="#999999"
+            android:textSize="20dp"
+            android:layout_alignLeft="@id/name1"
+            android:layout_below="@id/phonenumber1"
+            />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right"
+            android:background="@drawable/right"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            />
+        
+    </RelativeLayout>
+   
+     <!-- 时间 -->
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/re2"      
+            android:layout_marginTop="30dp"
+            >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arrive_time"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"/>
+       
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_time"
+            android:id="@+id/choose_time"
+            android:layout_centerVertical="true"
+            android:textColor="#999999"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textSize="20dp"/>
+        </RelativeLayout>
+        <!--  备注 -->
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/re3"
+            android:layout_below="@id/re2"
+            >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/youyin_beizhu"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginLeft="15dp"/>
+            
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_beizhu"
+            android:id="@+id/set_beizhu"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#999999"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"/>
+       
+        </RelativeLayout>
+       
+        <!-- 订单总价 -->
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:layout_marginTop="20dp"
+            android:id="@+id/re4">
+        
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_price"
+            android:id="@+id/total_price"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginLeft="15dp"/>
+            
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:id="@+id/price"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#999999"/>
+            <View 
+            android:layout_width="wrap_content"
+            android:layout_height="1.33dp"
+            android:background="@color/fenge"
+            android:layout_below="@id/price"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/total_price"
+            android:layout_alignRight="@id/price"/>
+            
+        </RelativeLayout>
+        
+        <!-- 支付方式 -->
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/re5"
+            android:layout_marginTop="40dp">
+            
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_pattern"
+            android:id="@+id/pay_pattern"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginLeft="15dp"/>
+           
+            
+           </RelativeLayout> 
+           
+        
+            
+            <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/re6">
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_payment"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"/>
+            
+            <ImageView 
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/chose"
+                android:id="@+id/chose"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"/>
+            
+            
+            </RelativeLayout> 
+            <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/iforminput_bg"
+            android:id="@+id/re7">
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payondelivery"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"/>
+            <ImageView 
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/unchose"
+                android:id="@+id/unchose"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bottom"
+             android:id="@+id/submit_button">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_order"
+                android:id="@+id/submit_order"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+       </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

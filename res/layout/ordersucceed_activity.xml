@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ebebeb" >
+    
+    <include 
+        layout="@layout/title_land"
+        android:id="@+id/ordersucceed_layout"/>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:id="@+id/succeed_layout"
+        android:background="@drawable/iforminput_bg"
+        android:layout_below="@id/ordersucceed_layout"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordersucceed"
+            android:id="@+id/ordersucceed"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordersucceed1"
+            android:id="@+id/ordersucceed1"
+            android:layout_below="@id/ordersucceed"
+            android:layout_alignLeft="@id/ordersucceed"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/order_layout"
+        android:background="@drawable/iforminput_bg"
+        android:layout_below="@id/succeed_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <!-- 订单号 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_number"
+            android:id="@+id/order_number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_number1"
+            android:id="@+id/order_number1"
+            android:layout_toRightOf="@id/order_number"
+            android:layout_alignTop="@id/order_number"
+            android:layout_marginLeft="25dp"/>
+        <!-- 支付方式 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alipay_way"
+            android:id="@+id/alipay_way"
+            android:layout_below="@id/order_number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alipay_way1"
+            android:id="@+id/alipay_way1"
+            android:layout_alignTop="@id/alipay_way"
+            android:layout_alignLeft="@id/order_number1"/>
+        <!-- 收货人 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consignee"
+            android:id="@+id/consignee"
+            android:layout_below="@id/alipay_way"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consignee1"
+            android:id="@+id/consignee1"
+            android:layout_alignTop="@id/consignee"
+            android:layout_alignLeft="@id/alipay_way1"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consignee_phone"
+            android:id="@+id/consignee_phone"
+            android:layout_toRightOf="@id/consignee1"
+            android:layout_alignTop="@id/consignee"
+            android:layout_marginLeft="10dp"/>
+        
+        <!-- 地址 -->
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consignee_address"
+            android:id="@+id/consignee_address"
+            android:layout_below="@id/consignee"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consignee_address1"
+            android:id="@+id/consignee_address1"
+            android:layout_alignTop="@id/consignee_address"
+            android:layout_alignLeft="@id/alipay_way1"/>
+        
+        <!-- 备注 -->
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beizhu"
+            android:id="@+id/beizhu"
+            android:layout_below="@id/consignee_address"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/beizhu1"
+            android:id="@+id/beizhu1"
+            android:layout_alignTop="@id/beizhu"
+            android:layout_alignLeft="@id/alipay_way1"/>
+        
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/green2"
+        android:layout_below="@id/order_layout"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@id/order_layout"
+        android:id="@+id/return_first"
+        android:text="@string/return_first"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/green2"
+        android:layout_below="@id/order_layout"
+        android:layout_marginTop="10dp"
+        android:id="@+id/return_cart"
+        android:text="@string/return_cart"
+        android:layout_toLeftOf="@id/return_first"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+    
+    
+
+</RelativeLayout>

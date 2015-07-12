@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/lvse"
+        android:id="@+id/youyin_title">
+        
+        <ImageView 
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/touxiang"
+            android:id="@+id/touxiang"
+            android:layout_centerVertical="true"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/youyin"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
+        <ImageView 
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/share"
+            android:id="@+id/share"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"/>
+     
+    </RelativeLayout>
+    <!-- 搜索 -->
+    <RelativeLayout
+             android:layout_width="fill_parent"
+             android:layout_height="35dp"
+             android:background="@drawable/iforminput_bg"
+             android:layout_below="@id/youyin_title"
+             android:id="@+id/seek_layout">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_hint"
+            android:id="@+id/first_hint"
+            android:layout_centerInParent="true"/>
+        <ImageView 
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/seek"
+            android:id="@+id/seek"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"/>
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:background="@color/background1"
+            android:id="@+id/fenge"
+            android:layout_toLeftOf="@id/seek"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/>
+                 
+        </RelativeLayout>
+       <!-- 茶 --> 
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/tea_layout"
+        android:background="@drawable/iforminput_bg"
+        android:layout_below="@id/seek_layout">
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/point_layout">
+        <ImageView 
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/first_point"
+            android:id="@+id/first_point"/>
+        <ImageView 
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/first_point1"
+            android:id="@+id/first_point1"
+            android:layout_toRightOf="@id/first_point"/>
+        <ImageView 
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/first_point1"
+            android:id="@+id/first_point2"
+            android:layout_toRightOf="@id/first_point1"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/lihua" />
+
+    </RelativeLayout>
+    
+    <!-- 上架时间 销量 库存 -->
+    <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="40dp"
+         android:background="@drawable/iforminput_bg"
+         android:layout_below="@id/tea_layout"
+         android:id="@+id/case_layout">
+        <!-- 上架时间 -->
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/up_time"
+            android:textSize="10dp"
+            android:textColor="@color/lvse"
+            android:id="@+id/up_time"
+            android:layout_centerVertical="true"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upc"
+            android:id="@+id/time_upc"
+            android:layout_toRightOf="@id/up_time"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upg"
+            android:id="@+id/time_upg"
+            android:layout_toRightOf="@id/up_time"
+            android:layout_below="@id/time_upc"/>
+            
+        </RelativeLayout>
+        <!-- 销量 -->
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/volume_layout"
+            android:layout_centerInParent="true">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sale_volume"
+            android:textSize="10dp"
+            android:id="@+id/sale_volume"
+            android:layout_centerVertical="true"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upc"
+            android:id="@+id/volume_upc"
+            android:layout_toRightOf="@id/sale_volume"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upg"
+            android:id="@+id/volume_upg"
+            android:layout_toRightOf="@id/sale_volume"
+            android:layout_below="@id/volume_upc"/>
+            
+        </RelativeLayout>
+        
+        <!-- 库存 -->
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inventory_layout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="85dp">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inventory"
+            android:textSize="10dp"
+            android:id="@+id/inventory"
+            android:layout_centerVertical="true"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upc"
+            android:id="@+id/inventory_upc"
+            android:layout_toRightOf="@id/inventory"/>
+        <ImageView 
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/upg"
+            android:id="@+id/inventory_upg"
+            android:layout_toRightOf="@id/inventory"
+            android:layout_below="@id/inventory_upc"/>
+            
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_scroll"
+        android:layout_below="@id/case_layout">
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tea_information">
+           <ImageView 
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:src="@drawable/p"
+               android:id="@+id/p1"
+               android:paddingLeft="10dp"/>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/wuhuatea"
+               android:textSize="15dp"
+               android:id="@+id/wuhuacha1"
+               android:layout_toRightOf="@id/p1"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="5dp"/>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/first_price"
+               android:textSize="10dp"
+               android:id="@+id/first_price1"
+               android:layout_alignTop="@id/wuhuacha1"
+               android:layout_toRightOf="@id/wuhuacha1"
+               android:layout_marginLeft="60dp"
+               android:textColor="@color/lvse"/>
+           <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/funtion"
+               android:id="@+id/funtion"
+               android:layout_below="@id/wuhuacha1"
+               android:layout_alignLeft="@id/wuhuacha1"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="5dp"
+               android:textSize="10dp"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_volume"
+                android:id="@+id/total_volume"
+                android:textSize="10dp"
+                android:layout_below="@id/funtion"
+                android:layout_marginTop="15dp"
+                android:layout_alignLeft="@id/funtion"/>
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                android:id="@+id/volume_amount"
+                android:textSize="10dp"
+                android:layout_below="@id/funtion"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/total_volume"
+                android:layout_marginLeft="10dp"/>
+            
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/inventory"
+                android:textSize="10dp"
+                android:id="@+id/inventory1"
+                android:layout_below="@id/funtion"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/volume_amount"
+                android:layout_marginLeft="15dp"/>
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount"
+                android:id="@+id/inventory_amount"
+                android:textSize="10dp"
+                android:layout_below="@id/funtion"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/inventory1"
+                android:layout_marginLeft="10dp"/>
+            
+            <TextView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/four"
+               android:id="@+id/four"
+               android:layout_toRightOf="@id/first_price1"
+               android:layout_below="@id/funtion"
+               android:layout_marginTop="15dp"/>
+           
+           <ImageView 
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:id="@+id/liangcha_buy"
+               android:src="@drawable/buy"
+               android:layout_below="@id/total_volume"
+               android:layout_alignLeft="@id/wuhuacha1"/>
+           
+           <View 
+               android:layout_width="1dp"
+               android:layout_height="20dp"
+               android:background="@color/fenge"
+               android:layout_below="@id/total_volume"
+               android:layout_alignRight="@id/volume_amount"
+               android:layout_marginTop="5dp"/>
+           
+           <ImageView 
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:id="@+id/liangcha_cart"
+               android:src="@drawable/first_cart"
+               android:layout_below="@id/total_volume"
+               android:layout_alignLeft="@id/inventory1"/>
+           
+           <View 
+               android:layout_width="1dp"
+               android:layout_height="20dp"
+               android:background="@color/fenge"
+               android:layout_below="@id/total_volume"
+               android:layout_alignRight="@id/inventory_amount"
+               android:layout_marginTop="5dp"/>
+           
+           <ImageView 
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:id="@+id/liangcha_share"
+               android:src="@drawable/share"
+               android:layout_below="@id/total_volume"
+               android:layout_toRightOf="@id/first_price1"/>
+           
+            
+           </RelativeLayout>
+           
+         
+           
+           
+        </LinearLayout>
+        
+    </ScrollView>
+    
+</RelativeLayout>
